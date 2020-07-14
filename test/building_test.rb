@@ -8,6 +8,11 @@ class BuildingTest < Minitest::Test
 
   def test_it_exists
     building = Building.new
-  end 
+  end
 
+  def test_it_has_units
+    building = Building.new
+
+    assert_equal [], building.units
+  end 
 end
