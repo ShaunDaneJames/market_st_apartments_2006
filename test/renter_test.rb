@@ -7,5 +7,10 @@ class RenterTest < Minitest::Test
   def test_it_exists
     renter = Renter.new
     assert_instance_of Renter, renter
+  end
 
-end 
+  def test_renters_have_names
+    renter = Renter.new("Jessie")
+    assert_equal "Jessie", renter.name
+  end 
+end
